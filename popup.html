@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>URL Parameter Adder</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Select Parameters</h1>
+  <form id="paramsForm">
+    <div>
+      <input type="checkbox" id="features" name="features" value="features=acftokall,finacfmgux">
+      <label for="features">features=acftokall,finacfmgux</label>
+    </div>
+    <div>
+      <input type="checkbox" id="mobile" name="mobile" value="mobile=1">
+      <label for="mobile">mobile=1</label>
+    </div>
+    <div>
+      <input type="checkbox" id="setapplicationendpoint" name="setapplicationendpoint" value="setapplicationendpoint=BNZEEAP00033FAD">
+      <label for="setapplicationendpoint">setapplicationendpoint=BNZEEAP00033FAD</label>
+    </div>
+    <div>
+      <input type="checkbox" id="testhooks" name="testhooks" value="testhooks=1">
+      <label for="testhooks">testhooks=1</label>
+    </div>
+    <button type="submit">Add Parameters and Reload</button>
+  </form>
+  <script src="popup.js"></script>
+</body>
+</html>

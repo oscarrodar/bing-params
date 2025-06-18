@@ -1,0 +1,45 @@
+body {
+  font-family: sans-serif;
+  margin: 10px;
+  width: 350px; /* Increased width slightly for longer labels */
+}
+
+h1 {
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#paramsForm div {
+  margin-bottom: 8px; /* Spacing between checkbox lines */
+  display: flex; /* Align checkbox and label nicely */
+  align-items: center;
+}
+
+#paramsForm input[type="checkbox"] {
+  margin-right: 8px; /* Space between checkbox and its label */
+}
+
+#paramsForm label {
+  font-size: 0.9em;
+  /* Allow label to take remaining space and wrap if necessary */
+  flex-grow: 1;
+  word-break: break-all; /* Break long parameter strings if needed */
+}
+
+button[type="submit"] { /* More specific selector for the submit button */
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  font-size: 0.9em;
+  margin-top: 20px; /* Increased top margin for separation */
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}

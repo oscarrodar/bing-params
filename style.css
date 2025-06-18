@@ -1,45 +1,67 @@
+/* style.css */
 body {
+  width: 350px;
   font-family: sans-serif;
-  margin: 10px;
-  width: 350px; /* Increased width slightly for longer labels */
+  padding: 0; /* Reset padding, manage via App's main div */
+  margin: 0;  /* Reset margin */
+  font-size: 14px; /* Base font size */
 }
 
-h1 {
-  font-size: 1.2em;
+/* Styles for elements directly within #root if needed,
+   but most specific styles are applied inline in app.js
+   or to components for this phase. */
+
+/* General h1 styling if not overridden by inline styles */
+#root h1 {
+  font-size: 1.3em; /* Default, can be overridden */
   text-align: center;
   margin-bottom: 15px;
+  margin-top: 10px; /* Give some space at the top */
 }
 
-#paramsForm div {
-  margin-bottom: 8px; /* Spacing between checkbox lines */
-  display: flex; /* Align checkbox and label nicely */
-  align-items: center;
-}
-
-#paramsForm input[type="checkbox"] {
-  margin-right: 8px; /* Space between checkbox and its label */
-}
-
-#paramsForm label {
+/* General label styling if not overridden */
+label {
+  display: block; /* Makes labels take their own line by default */
+  margin-bottom: 4px;
   font-size: 0.9em;
-  /* Allow label to take remaining space and wrap if necessary */
-  flex-grow: 1;
-  word-break: break-all; /* Break long parameter strings if needed */
+  font-weight: 500; /* Slightly bolder labels */
 }
 
-button[type="submit"] { /* More specific selector for the submit button */
-  background-color: #4CAF50;
-  color: white;
+/* General input[type="text"] styling */
+input[type="text"] {
+  width: calc(100% - 12px); /* Adjust width considering padding */
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box; /* Important for width calculation */
+  margin-bottom: 10px; /* Space below text inputs */
+}
+
+/* General input[type="checkbox"] styling */
+input[type="checkbox"] {
+  margin-right: 6px;
+  vertical-align: middle; /* Align checkbox with label text */
+}
+
+/* General button styling */
+button {
   padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
   border: none;
   border-radius: 3px;
   cursor: pointer;
-  display: block;
-  width: 100%;
-  font-size: 0.9em;
-  margin-top: 20px; /* Increased top margin for separation */
+  font-size: 1em;
+  width: 100%; /* Make button full width */
+  box-sizing: border-box;
+  margin-top: 15px; /* Space above the button */
 }
 
-button[type="submit"]:hover {
-  background-color: #45a049;
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Divs used for grouping input elements or sections */
+div.input-group { /* You might wrap components in divs with this class if needed */
+  margin-bottom: 10px;
 }
